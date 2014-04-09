@@ -1,0 +1,56 @@
+$navbar-default-bg: #7C71AD;
+$navbar-default-color: #fff;
+$navbar-default-link-color: #fff;
+$navbar-margin-bottom: 0px;
+$navbar-default-link-hover-color: #000;
+$navbar-default-brand-hover-color: #fff;
+
+$navbar-default-toggle-icon-bar-bg: #fff;
+$navbar-default-toggle-hover-bg: #445569;
+
+@import 'bootstrap';
+
+body { padding-top: 50px; }
+
+.navbar{
+	border-radius: 0px;
+}
+
+#home,#about,#contact{
+	height: 400px;
+	padding: 20px;
+	padding-top: 0px;
+	text-align: center;
+}
+
+#home > .container, #about > .container, #contact > .container{
+	text-align: left;
+	padding-left: 40px;
+
+}
+
+@media (max-width: 450px) {
+  #home > .container, #about > .container, #contact > .container{
+    padding-left: 0px;
+  }
+}
+
+.anchor{
+	display: block;
+	height: 50px;
+	margin-top: -50px;
+	visibility: hidden;
+}
+
+#home{
+	background-color: #F89A7E;
+}
+
+#about {
+	background-color: #F2CA85;
+}
+
+#contact {
+	background-color: #54D1F1;
+}
+
