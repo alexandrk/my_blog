@@ -1,14 +1,16 @@
-$navbar-default-bg: #7C71AD;
-$navbar-default-color: #fff;
-$navbar-default-link-color: #fff;
-$navbar-margin-bottom: 0px;
-$navbar-default-link-hover-color: #000;
-$navbar-default-brand-hover-color: #fff;
+$font-family-sans-serif: 			'Antic Didone', serif;
+$navbar-default-bg: 				#7C71AD;
+$navbar-default-color: 				white;
+$navbar-default-link-color: 		white;
+$navbar-margin-bottom: 				0px;
+$navbar-default-link-hover-color: 	black;
+$navbar-default-brand-hover-color: 	white;
 
-$navbar-default-toggle-icon-bar-bg: #fff;
-$navbar-default-toggle-hover-bg: #445569;
+$navbar-default-toggle-icon-bar-bg: white;
+$navbar-default-toggle-hover-bg: 	#445569;
 
 @import 'bootstrap';
+@import url(http://fonts.googleapis.com/css?family=Wire+One|Antic+Didone|Monoton);
 
 body { padding-top: 50px; }
 
@@ -16,10 +18,22 @@ body { padding-top: 50px; }
 	border-radius: 0px;
 }
 
+.navbar-brand{
+	font-family: 'Monoton', cursive;
+	font-size: 30px;
+}
+
+.navbar-nav{
+	font-family: 'Monoton', cursive;
+}
+
 #home,#about,#contact{
 	height: 400px;
 	padding: 20px;
 	padding-top: 0px;
+}
+
+.align_center{
 	text-align: center;
 }
 
