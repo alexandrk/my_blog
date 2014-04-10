@@ -27,8 +27,17 @@ body { padding-top: 50px; }
 	font-family: 'Monoton', cursive;
 }
 
+.btn-acct a{
+	color: white;
+	text-decoration: none;
+}
+
+.nav > .btn-group{
+	margin-top: 7px;
+}
+
 #home,#about,#contact{
-	height: 400px;
+	// height: 400px;
 	padding: 20px;
 	padding-top: 0px;
 }
@@ -37,9 +46,16 @@ body { padding-top: 50px; }
 	text-align: center;
 }
 
+.alerts{
+	float: left;
+	margin-left: 9.5%;
+	overflow: 10;
+	margin-top: 12px;
+}
+
 #home > .container, #about > .container, #contact > .container{
 	text-align: left;
-	padding-left: 40px;
+	padding-top: 40px;
 
 }
 
@@ -67,4 +83,3 @@ body { padding-top: 50px; }
 #contact {
 	background-color: #54D1F1;
 }
-

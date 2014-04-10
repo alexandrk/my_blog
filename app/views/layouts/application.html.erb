@@ -11,9 +11,15 @@
 <body>
 
 	<%= render 'layouts/header' %>
-	
-		<%= yield %>
-	
+
+	<div class="container alerts">
+	<% flash.each do |name, msg| %>
+		<% name = :success if name == :notice %>
+		<%= content_tag(:div, msg, class: "alert alert-#{name}") %>
+	<% end %>
+	</div>
+
+	<%= yield %>
 
 </body>
 </html>

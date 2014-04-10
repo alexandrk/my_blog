@@ -6,6 +6,7 @@ gem 'rails', '4.0.2'
 group :development, :test do
 	gem "better_errors"
 	gem 'sqlite3'
+	gem 'debugger'
 end
 
 group :production do
@@ -34,6 +35,8 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 gem 'bootstrap-sass', '~> 3.1.1'
+
+gem 'devise', '~> 3.2.4'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
