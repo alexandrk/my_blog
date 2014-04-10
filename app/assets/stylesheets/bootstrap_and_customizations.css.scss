@@ -1,5 +1,6 @@
 $font-family-sans-serif: 			'Antic Didone', serif;
-$navbar-default-bg: 				#7C71AD;
+$brand-primary: 					#7C71AD;
+$navbar-default-bg: 				$brand-primary;
 $navbar-default-color: 				white;
 $navbar-default-link-color: 		white;
 $navbar-margin-bottom: 				0px;
@@ -8,6 +9,7 @@ $navbar-default-brand-hover-color: 	white;
 
 $navbar-default-toggle-icon-bar-bg: white;
 $navbar-default-toggle-hover-bg: 	#445569;
+$body-bg:							#F89A7E;
 
 @import 'bootstrap';
 @import url(http://fonts.googleapis.com/css?family=Wire+One|Antic+Didone|Monoton);
@@ -47,10 +49,15 @@ body { padding-top: 50px; }
 }
 
 .alerts{
-	float: left;
-	margin-left: 9.5%;
-	overflow: 10;
 	margin-top: 12px;
+}
+.alerts > .alert{
+	margin-bottom: 0px;
+}
+
+ .panel-footer{
+// 	background-color: $brand-primary;
+	overflow: hidden;
 }
 
 #home > .container, #about > .container, #contact > .container{
