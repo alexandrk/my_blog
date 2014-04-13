@@ -11,6 +11,8 @@ $navbar-default-toggle-icon-bar-bg: white;
 $navbar-default-toggle-hover-bg: 	#445569;
 $body-bg:							#F89A7E;
 
+// min-width: 1200px, 992px, 768px, 
+
 @import 'bootstrap';
 @import url(http://fonts.googleapis.com/css?family=Wire+One|Antic+Didone|Monoton);
 
@@ -49,10 +51,17 @@ body { padding-top: 50px; }
 }
 
 .alerts{
-	margin-top: 12px;
+	margin: 12px auto;
 }
 .alerts > .alert{
 	margin-bottom: 0px;
+}
+
+.container > .panel{
+	margin-top: 20px;
+}
+.panel-heading{
+	padding: 1px 15px;
 }
 
  .panel-footer{
@@ -89,4 +98,29 @@ body { padding-top: 50px; }
 
 #contact {
 	background-color: #54D1F1;
+}
+
+.posts > .panel{
+	float: left;
+}
+
+@media (min-width: 992px) {
+	.posts > .panel{
+		width: 30%;
+		margin-right: 20px;
+	}
+}
+
+@media (max-width: 992px) {
+	.posts > .panel{
+		width: 45%;
+		margin-right: 20px;
+	}
+}
+
+@media (max-width: 768px) {
+	.posts > .panel{
+		width: 100%;
+		margin-right: 0;
+	}
 }
