@@ -11,6 +11,8 @@ $navbar-default-toggle-icon-bar-bg: white;
 $navbar-default-toggle-hover-bg: 	#445569;
 $body-bg:							#F89A7E;
 
+$state-warning-bg: 					#F2CA85;
+
 // min-width: 1200px, 992px, 768px, 
 
 @import 'bootstrap';
@@ -62,10 +64,18 @@ body { padding-top: 50px; }
 }
 .panel-heading{
 	padding: 1px 15px;
+	overflow: hidden;
+}
+span.tags{
+	//border-top: 1px solid #ddd;
+	line-height: 25px;
+}
+
+.panel-warning > .panel-footer{
+	background-color: $state-warning-bg;
 }
 
  .panel-footer{
-// 	background-color: $brand-primary;
 	overflow: hidden;
 }
 

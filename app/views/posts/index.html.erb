@@ -6,16 +6,27 @@
       <div class="panel panel-default">
         <div class="panel-heading">
           <h3><%= post.title %></h3>
-          <p>Tags: <%= post.tags %></p>
+          <%= "<p class='author pull-left'>By: #{post.user.email}</p>".html_safe if post.user %>
+          <% if post.user == current_user && !current_user.blank? %>
+            <div class="pull-right">
+              <!-- <%= link_to 'Show', post %> | -->
+              <%= link_to 'Edit', edit_post_path(post) %> |
+              <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+            </div>
+          <% end %>
         </div>
         <div class="panel-body">
           <%= post.content %>
         </div>
-        <div class="panel-footer">
-          <%= link_to 'Show', post %> |
-          <%= link_to 'Edit', edit_post_path(post) %> |
-          <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
-        </div>
+        <% unless post.tags.empty? %>
+          <div class="panel-footer">
+              <span class='tags'>
+              <% post.tags.split(",").each { |e| %>
+                <span class='btn btn-info btn-xs'><%= e %></span>
+              <% } %>
+              </span>
+          </div>
+        <% end %>
       </div>
     <% end %>
     
