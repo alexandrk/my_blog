@@ -64,6 +64,12 @@ class PostsController < ApplicationController
   end
 
   private
+
+    def correct_user
+      @post = current_user.posts.find_by(id: params[:id])
+      redirect_to posts_path, alert: "Not authorized for this action" if @post.nil?
+    end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_post
       @post = Post.find(params[:id])
@@ -71,11 +77,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title, :tags, :content)
-    end
-
-    def correct_user
-      @post = current_user.posts.find_by(id: params[:id])
-      redirect_to posts_path, alert: "Not authorized for this action" if @post.nil?
+      params.require(:post).permit(:image, :title, :tags, :content)
     end
 end

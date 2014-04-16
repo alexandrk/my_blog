@@ -16,6 +16,7 @@
           <% end %>
         </div>
         <div class="panel-body">
+          <%= image_tag post.image.url(:medium) if post.image.exists? %><br />
           <%= post.content %>
         </div>
         <% unless post.tags.empty? %>

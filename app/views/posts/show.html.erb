@@ -12,6 +12,7 @@
           <% end %>
         </div>
   		<div class="panel-body">
+  			<%= image_tag @post.image.url(:medium) unless @post.image.nil? %>
   			<%= @post.content %>
 		</div>
 
