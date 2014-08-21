@@ -42,6 +42,14 @@ body { padding-top: 50px; }
 	margin-top: 7px;
 }
 
+.btn-secondary{
+	background-color: #7F9A65;
+}
+
+.btn-secondary:hover{
+	background-color: #4A7023;
+}
+
 #home,#about,#contact{
 	// height: 400px;
 	padding: 20px;
@@ -133,4 +141,8 @@ span.tags{
 		width: 100%;
 		margin-right: 0;
 	}
+}
+
+.x100percent{
+	width: 100% !important;
 }

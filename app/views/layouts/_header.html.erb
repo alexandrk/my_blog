@@ -16,17 +16,29 @@
 						<li><%= link_to "About Us", "#about_a" %></li>
 						<li><%= link_to "Contact", "#contact_a" %></li>
 					</ul>
-					<% unless user_signed_in? %>
+
 					<div class="nav navbar-nav navbar-right">
+
+					<!-- Posts view settings -->
+						<button class="btn btn-secondary navbar-btn btn-acct" role: "button" data-view-type="list-view">
+							<%= link_to "L", "", title: "List View", rel: "tooltip" %>
+						</button>
+						<button class="btn btn-secondary navbar-btn btn-acct" role: "button" data-view-type="grid-view">
+							<%= link_to "G", "", title: "Grid View", rel: "tooltip", class: "green-btn" %>
+						</button>
+
+					<% unless user_signed_in? %>
+					<!-- Login / Logout -->
+
 						<button class="btn btn-primary navbar-btn btn-acct" role: "button">
 							<%= link_to "Sign In", new_user_session_path %>
 						</button>
 						<button class="btn btn-primary navbar-btn btn-acct" role: "button">
 							<%= link_to "Sign Up", new_user_registration_path %>
 						</button>
-					</div>
+					
 					<% else %>
-						<div class="nav navbar-nav navbar-right">
+						<!-- Logged-in User -->
 							<div class="btn-group">
 							  <button type="button" class="btn btn-primary"><%= current_user.email %></button>
 							  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
@@ -39,8 +51,10 @@
 							    <li><%= link_to "Log Out", destroy_user_session_path, method: "delete" %></li>
 							  </ul>
 							</div>
-						</div>
 					<% end %>
+
+					</div>
+
 				</div>
 			</div>
 			<div class="collapse navbar-collapse navbar-ex1-collapse">
