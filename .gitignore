@@ -15,4 +15,5 @@
 /log/*.log
 /tmp
 /public/system/posts/images
+/public/assets/
 .DS_Store
